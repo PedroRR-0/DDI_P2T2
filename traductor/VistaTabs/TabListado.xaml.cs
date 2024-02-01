@@ -20,5 +20,10 @@ namespace traductor
         public Listado() { 
             InitializeComponent();
         }
+
+        private void btnAnadListado_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
