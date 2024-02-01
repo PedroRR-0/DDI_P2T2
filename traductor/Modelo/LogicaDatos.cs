@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,12 +10,13 @@ namespace traductor.Modelo
 {
     public class LogicaDatos
     {
-        private ConcurrentDictionary<string, string> parejaPalabra = new ConcurrentDictionary<string, string>();
+        private ObservableCollection<KeyValuePair<string, string>> palabras = [];
         private static LogicaDatos? instancia;
 
         public bool anadirPalabra(string palabraIng, string palabraEsp)
         {
-            bool correcto = parejaPalabra.TryAdd(palabraIng, palabraEsp);
+            palabras.Add(new KeyValuePair<string, string>(palabraIng, palabraEsp));
+            bool correcto = true;
             return correcto;
         }
 
@@ -23,6 +25,9 @@ namespace traductor.Modelo
             instancia??=new LogicaDatos();
             return instancia;
         }
-        
+        public ObservableCollection<KeyValuePair<string, string>> getLista() {
+            return palabras;
+                }
+
     }
 }

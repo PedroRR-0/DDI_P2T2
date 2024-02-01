@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,13 @@ namespace traductor
     public partial class Listado : UserControl
     {
         private LogicaDatos logica;
-        public Listado() { 
+        
+        public Listado()
+        {
             InitializeComponent();
             logica = LogicaDatos.getInstance();
+            logica.anadirPalabra("aa", "aa");
+            listaPalabras.ItemsSource = logica.getLista().OrderBy(pair => pair.Key);
         }
 
         private void btnAnadListado_Click(object sender, RoutedEventArgs e)
@@ -34,10 +39,15 @@ namespace traductor
             {
                 campoIngListado.Clear();
                 campoEspListado.Clear();
+                refresh();
             } else
             {
-                btnAnadListado.Content = "ya existe";
+                Console.WriteLine("ya existe");
             }
+        }
+        private void refresh()
+        {
+            listaPalabras.ItemsSource = logica.getLista().OrderBy(pair => pair.Key);
         }
     }
 }

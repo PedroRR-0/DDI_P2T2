@@ -7,8 +7,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
-        <ListBox x:Name="listaPalabras" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="183,21,221,290"/>
-        <Label Content="Inglés" HorizontalAlignment="Left" Margin="91,257,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
+        <ListBox x:Name="listaPalabras" Margin="183,21,221,290">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Key}" />
+                        <TextBlock Text=" = " />
+                        <TextBlock Text="{Binding Value}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+            <Label Content="Inglés" HorizontalAlignment="Left" Margin="91,257,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
         <Label Content="Español" HorizontalAlignment="Left" Margin="264,257,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="24"/>
         <TextBox x:Name="campoIngListado" HorizontalAlignment="Left" Margin="91,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="22"/>
         <TextBox x:Name="campoEspListado" HorizontalAlignment="Left" Margin="264,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="22"/>
