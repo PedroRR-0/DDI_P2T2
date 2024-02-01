@@ -11,7 +11,7 @@
         <Label Content="Inglés" HorizontalAlignment="Left" Margin="91,257,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
         <Label Content="Español" HorizontalAlignment="Left" Margin="264,257,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="24"/>
         <TextBox x:Name="campoIngListado" HorizontalAlignment="Left" Margin="91,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="22"/>
-        <TextBox x:Name="campoEspListado1" HorizontalAlignment="Left" Margin="264,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="22"/>
+        <TextBox x:Name="campoEspListado" HorizontalAlignment="Left" Margin="264,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="22"/>
         <Button x:Name="btnAnadListado" Content="Añadir" HorizontalAlignment="Left" Margin="482,283,0,0" VerticalAlignment="Top" Click="btnAnadListado_Click" FontSize="24" Height="47" Width="97"/>
         <Button x:Name="btnElimListado" Content="Eliminar" HorizontalAlignment="Left" Margin="609,283,0,0" VerticalAlignment="Top" FontSize="24" Height="47" Width="102"/>
 
