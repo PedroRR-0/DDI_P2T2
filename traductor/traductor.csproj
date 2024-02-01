@@ -8,4 +8,16 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Update="VistaTabs\TabEspIng.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="VistaTabs\TabListado.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="VistaTabs\TabJuego.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>
