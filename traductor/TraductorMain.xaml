@@ -9,10 +9,18 @@
 
     <Grid Name="grid">
         <TabControl>
-            <tabData:IngEsp/>
-            <tabData:EspIng/>
-            <tabData:Juego/>
-            <tabData:Listado/>
+            <TabItem Header="Inglés-Español">
+                <tabData:IngEsp />
+            </TabItem>
+            <TabItem Header="Español-Inglés">
+                <tabData:EspIng />
+            </TabItem>
+            <TabItem Header="Juego">
+                <tabData:Juego />
+            </TabItem>
+            <TabItem Header="Listado Ordenado">
+                <tabData:Listado />
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>

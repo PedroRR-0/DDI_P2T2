@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace traductor
 {
-    public partial class IngEsp : TabItem
+    public partial class IngEsp : UserControl
     {
         public IngEsp() { 
             InitializeComponent();

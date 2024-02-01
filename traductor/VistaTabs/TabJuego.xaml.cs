@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace traductor
 {
-    public partial class Juego : TabItem
+    public partial class Juego : UserControl
     {
         public Juego() { 
             InitializeComponent();

@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace traductor
 {
-    public partial class EspIng : TabItem
+    public partial class EspIng : UserControl
     {
         public EspIng() { 
             InitializeComponent();
