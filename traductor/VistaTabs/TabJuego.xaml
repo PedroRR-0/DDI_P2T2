@@ -12,7 +12,7 @@
         <TextBox x:Name="campoRespJuego" HorizontalAlignment="Left" Margin="142,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" FontSize="22"/>
         <Button x:Name="btnSigJuego" Content="Siguiente" HorizontalAlignment="Left" Margin="142,266,0,0" VerticalAlignment="Top" FontSize="22" Height="46" Width="116" Click="btnSigJuego_Click"/>
         <Label x:Name="labelProgresoJuego" Content="0/10" HorizontalAlignment="Left" Margin="312,271,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
-        <Button x:Name="btnEmpezar" Content="Empezar" HorizontalAlignment="Left" Margin="495,83,0,0" VerticalAlignment="Top" FontSize="24" Height="42" Width="112"/>
+        <Button x:Name="btnEmpezar" Content="Empezar" HorizontalAlignment="Left" Margin="495,83,0,0" VerticalAlignment="Top" FontSize="24" Height="42" Width="112" Click="btnEmpezar_Click"/>
         <Label Content="Aciertos" HorizontalAlignment="Left" Margin="470,189,0,0" VerticalAlignment="Top" FontSize="22"/>
         <Label x:Name="labelAciertos" Content="0" HorizontalAlignment="Left" Margin="579,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,0.116" Foreground="#FF26FF08" FontWeight="Bold" FontSize="24"/>
         <Label Content="Fallos" HorizontalAlignment="Left" Margin="470,261,0,0" VerticalAlignment="Top" FontSize="22"/>
