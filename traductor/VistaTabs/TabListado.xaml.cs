@@ -25,6 +25,7 @@ namespace traductor
         {
             InitializeComponent();
             logica = LogicaDatos.getInstance();
+
             listaPalabras.ItemsSource = logica.getLista().OrderBy(pair => pair.Key);
         }
 
@@ -38,11 +39,23 @@ namespace traductor
             campoIngListado.Clear();
             campoEspListado.Clear();
             refresh();
-
+                        
         }
+
+        private void btnElimListado_Click(object sender, RoutedEventArgs e)
+        {
+            KeyValuePair<string, string> palabraSeleccionada = (KeyValuePair<string, string>)listaPalabras.SelectedItem;
+
+            logica.borrarPalabra(palabraSeleccionada);
+            refresh();
+            
+        }
+
         private void refresh()
         {
             listaPalabras.ItemsSource = logica.getLista().OrderBy(pair => pair.Key);
         }
+
+        
     }
 }

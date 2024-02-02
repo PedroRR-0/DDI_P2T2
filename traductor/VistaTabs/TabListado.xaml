@@ -5,9 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:traductor"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="380" d:DesignWidth="800">
     <Grid Background="White">
-        <ListBox x:Name="listaPalabras" Margin="183,21,221,290">
+        <ListBox x:Name="listaPalabras" Margin="162,30,162,216">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -18,12 +18,12 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-            <Label Content="Inglés" HorizontalAlignment="Left" Margin="91,257,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
-        <Label Content="Español" HorizontalAlignment="Left" Margin="264,257,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="24"/>
-        <TextBox x:Name="campoIngListado" HorizontalAlignment="Left" Margin="91,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="22"/>
-        <TextBox x:Name="campoEspListado" HorizontalAlignment="Left" Margin="264,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="22"/>
-        <Button x:Name="btnAnadListado" Content="Añadir" HorizontalAlignment="Left" Margin="482,283,0,0" VerticalAlignment="Top" Click="btnAnadListado_Click" FontSize="24" Height="47" Width="97"/>
-        <Button x:Name="btnElimListado" Content="Eliminar" HorizontalAlignment="Left" Margin="609,283,0,0" VerticalAlignment="Top" FontSize="24" Height="47" Width="102"/>
+        <Label Content="Inglés" HorizontalAlignment="Left" Margin="162,0,0,0" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" RenderTransformOrigin="0.477,-0.48"/>
+        <Label Content="Español" HorizontalAlignment="Left" Margin="438,0,0,0" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
+        <TextBox x:Name="campoIngListado" HorizontalAlignment="Left" Margin="162,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="22"/>
+        <TextBox x:Name="campoEspListado" HorizontalAlignment="Left" Margin="438,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="22"/>
+        <Button x:Name="btnAnadListado" Content="Añadir" HorizontalAlignment="Left" Margin="213,265,0,0" VerticalAlignment="Top" Click="btnAnadListado_Click" FontSize="24" Height="47" Width="98"/>
+        <Button x:Name="btnElimListado" Content="Eliminar" HorizontalAlignment="Left" Margin="487,265,0,0" VerticalAlignment="Top" FontSize="24" Height="47" Width="102" Click="btnElimListado_Click"/>
 
     </Grid>
 </UserControl>

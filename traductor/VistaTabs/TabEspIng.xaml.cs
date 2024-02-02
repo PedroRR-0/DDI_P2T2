@@ -12,13 +12,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using traductor.Modelo;
 
 namespace traductor
 {
     public partial class EspIng : UserControl
     {
+        LogicaDatos logica = LogicaDatos.getInstance();
         public EspIng() { 
             InitializeComponent();
+        }
+       
+        
+        
+
+       public void traducir()
+        {
+            labelTradIng.Content = logica.TraducirEoI(false, campoEsp.Text);
+        }
+
+        private void btnEspIng_Click(object sender, RoutedEventArgs e)
+        {
+            traducir();
         }
     }
 }
