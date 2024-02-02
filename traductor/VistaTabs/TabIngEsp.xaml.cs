@@ -12,17 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using traductor.Modelo;
 
 namespace traductor
 {
     public partial class IngEsp : UserControl
     {
+        LogicaDatos logica = LogicaDatos.getInstance();
         public IngEsp() { 
             InitializeComponent();
         }
 
+
+        public void traducir()
+        {
+            labelTradEsp.Content = logica.TraducirEoI(true, campoIng.Text);
+        }
+
+       
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            traducir();
 
         }
     }

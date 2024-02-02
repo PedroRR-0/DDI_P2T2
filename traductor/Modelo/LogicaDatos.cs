@@ -29,5 +29,38 @@ namespace traductor.Modelo
             return palabras;
                 }
 
+
+
+        public String TraducirEoI(bool traducir, String palabraTra)
+            
+        {
+            if (traducir)
+            {
+                foreach (KeyValuePair<string, string> palabra in palabras)
+                {
+                    if (palabra.Key == palabraTra)
+                    {
+                        return palabra.Value;
+                    }
+
+                }
+            }
+            else
+            {
+                foreach (KeyValuePair<string, string> palabra in palabras)
+                {
+                    if (palabra.Value == palabraTra)
+                    {
+                        return palabra.Key;
+                    }
+                }
+            }
+            return "No se ha encontrado la palabra";
+            }
+
+        }
     }
-}
+
+
+
+
