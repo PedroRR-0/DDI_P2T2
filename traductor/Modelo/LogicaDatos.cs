@@ -20,14 +20,22 @@ namespace traductor.Modelo
             return correcto;
         }
 
+
+        public void borrarPalabra(KeyValuePair<string, string> palabraSeleccionada)
+        {
+            palabras.Remove(palabraSeleccionada);
+        }
+
+
         public static LogicaDatos getInstance()
         {
             instancia??=new LogicaDatos();
             return instancia;
         }
+
         public ObservableCollection<KeyValuePair<string, string>> getLista() {
             return palabras;
-                }
+        }
 
     }
 }

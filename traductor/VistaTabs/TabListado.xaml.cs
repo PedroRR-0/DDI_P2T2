@@ -25,7 +25,7 @@ namespace traductor
         {
             InitializeComponent();
             logica = LogicaDatos.getInstance();
-            logica.anadirPalabra("aa", "aa");
+
             listaPalabras.ItemsSource = logica.getLista().OrderBy(pair => pair.Key);
         }
 
@@ -35,19 +35,27 @@ namespace traductor
             ing = char.ToUpper(ing[0])+ing.Substring(1);
             string esp = campoEspListado.Text.Trim();
             esp = char.ToUpper(esp[0]) + esp.Substring(1);
-            if(logica.anadirPalabra(ing, esp))
-            {
+            
                 campoIngListado.Clear();
                 campoEspListado.Clear();
                 refresh();
-            } else
-            {
-                Console.WriteLine("ya existe");
-            }
+                        
         }
+
+        private void btnElimListado_Click(object sender, RoutedEventArgs e)
+        {
+            KeyValuePair<string, string> palabraSeleccionada = (KeyValuePair<string, string>)listaPalabras.SelectedItem;
+
+            logica.borrarPalabra(palabraSeleccionada);
+            refresh();
+            
+        }
+
         private void refresh()
         {
             listaPalabras.ItemsSource = logica.getLista().OrderBy(pair => pair.Key);
         }
+
+        
     }
 }
