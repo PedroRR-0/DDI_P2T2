@@ -7,7 +7,7 @@
              mc:Ignorable="d" d:DesignWidth="800" Height="410">
     <Grid Background="White" Margin="0,0,0,0">
         <Label Content="Español" HorizontalAlignment="Left" Margin="60,60,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <Button x:Name="btnEspIng" Content="Traducir al Ingles" HorizontalAlignment="Center" Margin="0,292,0,0" VerticalAlignment="Top" Height="34" Width="228"/>
+        <Button x:Name="btnEspIng" Content="Traducir al Ingles" HorizontalAlignment="Center" Margin="0,292,0,0" VerticalAlignment="Top" Height="34" Width="228" Click="btnEspIng_Click"/>
         <TextBox x:Name="campoEsp" Text="Hola" HorizontalAlignment="Left" Margin="60,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="30" FontSize="20" AutomationProperties.HelpText="Hooala"/>
         <Label x:Name="labelTradIng" Content="Label" HorizontalAlignment="Left" Margin="500,152,0,0" VerticalAlignment="Top"/>
 
