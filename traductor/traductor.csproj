@@ -6,7 +6,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>resources\img\icono.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="resources\img\icono.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="VistaTabs\TabEspIng.xaml.cs">
@@ -18,10 +23,6 @@
     <Compile Update="VistaTabs\TabJuego.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="resources\img\" />
   </ItemGroup>
 
 </Project>
