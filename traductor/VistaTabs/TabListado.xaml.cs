@@ -35,10 +35,10 @@ namespace traductor
             ing = char.ToUpper(ing[0])+ing.Substring(1);
             string esp = campoEspListado.Text.Trim();
             esp = char.ToUpper(esp[0]) + esp.Substring(1);
-            
-                campoIngListado.Clear();
-                campoEspListado.Clear();
-                refresh();
+            logica.anadirPalabra(ing, esp);
+            campoIngListado.Clear();
+            campoEspListado.Clear();
+            refresh();
                         
         }
 

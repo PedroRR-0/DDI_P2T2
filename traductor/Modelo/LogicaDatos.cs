@@ -13,11 +13,10 @@ namespace traductor.Modelo
         private ObservableCollection<KeyValuePair<string, string>> palabras = [];
         private static LogicaDatos? instancia;
 
-        public bool anadirPalabra(string palabraIng, string palabraEsp)
+        public void anadirPalabra(string palabraIng, string palabraEsp)
         {
             palabras.Add(new KeyValuePair<string, string>(palabraIng, palabraEsp));
-            bool correcto = true;
-            return correcto;
+           
         }
 
 
