@@ -37,8 +37,7 @@ namespace traductor
             aciertos = 0;
             fallos = 0;
             setLetreros(contador,aciertos, fallos);
-            palabra = palabraAleat(logica.getLista());
-            palabraSelecJuego.Content = palabra.Key;
+            escribirPalabraAleat();
         }
 
         public void setLetreros(int contador, int aciertos, int fallos)
@@ -63,7 +62,15 @@ namespace traductor
 
         private void btnSigJuego_Click(object sender, RoutedEventArgs e)
         {
+            escribirPalabraAleat();
+        }
 
+        private void escribirPalabraAleat()
+        {
+            palabra = palabraAleat(logica.getLista());
+            palabraSelecJuego.Content = palabra.Key;
+            contador++;
+            //if(campoRespJuego.Text.ToLower().Equals())
         }
     }
 }
