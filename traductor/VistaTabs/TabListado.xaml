@@ -26,7 +26,7 @@
 
 
     <Grid Background="White">
-        <ListBox x:Name="listaPalabras" Margin="50,126,50,120" FontSize="16" FontFamily="Bahnschrift" Background="#FFFFFFE8" BorderBrush="#FFF6FF5C" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <ListBox x:Name="listaPalabras" Margin="50,126,50,120" FontSize="16" FontFamily="Bahnschrift" Background="#FFFFFBB3" BorderBrush="#FFF6FF5C" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListBox.Effect>
                 <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
             </ListBox.Effect>
