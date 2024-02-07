@@ -24,9 +24,12 @@
         </Style>
     </UserControl.Resources>
 
-    <Grid Background="White">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/VistaTabs/fondotranslator.jpg"/>
+        </Grid.Background>
         <Label x:Name="label" Content="Inglés a Español" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="43" Width="145" FontSize="18"/>
-        <Button x:Name="btnIngEsp" Content="Traducir al Español" HorizontalAlignment="Center" Margin="0,284,0,0" VerticalAlignment="Top" Click="Button_Click" FontSize="18"  Height="49" Width="228" Background="#FFC8EEC5"  Style="{StaticResource RoundedButtonStyle}">
+        <Button x:Name="btnIngEsp" Content="Traducir al Español" HorizontalAlignment="Center" Margin="0,284,0,0" VerticalAlignment="Top" Click="Button_Click" FontSize="18"  Height="49" Width="228"  Background="#FFD3FFC6" BorderBrush="#FF92B07B"  Style="{StaticResource RoundedButtonStyle}">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
             </Button.Effect>

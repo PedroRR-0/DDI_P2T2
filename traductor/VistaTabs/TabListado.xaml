@@ -25,7 +25,10 @@
     </UserControl.Resources>
 
 
-    <Grid Background="White">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/VistaTabs/fondotranslator.jpg"/>
+        </Grid.Background>
         <ListBox x:Name="listaPalabras" Margin="50,126,50,120" FontSize="16" FontFamily="Bahnschrift" Background="#FFFFFBB3" BorderBrush="#FFF6FF5C" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListBox.Effect>
                 <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
@@ -44,7 +47,7 @@
         <Label Content="Español" HorizontalAlignment="Left" Margin="455,68,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="18"/>
         <TextBox x:Name="campoIngListado" HorizontalAlignment="Left" Margin="133,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="18"/>
         <TextBox x:Name="campoEspListado" HorizontalAlignment="Left" Margin="535,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="18"/>
-        <Button x:Name="btnAnadListado" Content="Añadir" HorizontalAlignment="Left" Margin="61,288,0,0" VerticalAlignment="Top" Click="btnAnadListado_Click" FontSize="18" Height="46" Width="98"  Style="{StaticResource RoundedButtonStyle}" Background="#FFC8EEC5" FontFamily="Bahnschrift" >
+        <Button x:Name="btnAnadListado" Content="Añadir" HorizontalAlignment="Left" Margin="61,288,0,0" VerticalAlignment="Top" Click="btnAnadListado_Click" FontSize="18" Height="46" Width="98"  Style="{StaticResource RoundedButtonStyle}"  Background="#FFD3FFC6" BorderBrush="#FF92B07B" FontFamily="Bahnschrift" >
             <Button.Effect>
                 <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
             </Button.Effect>

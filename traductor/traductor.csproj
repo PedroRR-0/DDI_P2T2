@@ -10,7 +10,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="VistaTabs\fondotranslator.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="resources\img\icono.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="VistaTabs\fondotranslator.jpg" />
   </ItemGroup>
 
   <ItemGroup>

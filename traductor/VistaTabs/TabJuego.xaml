@@ -24,9 +24,12 @@
         </Style>
     </UserControl.Resources>
 
-    <Grid Background="White" Margin="-8,0,8,0">
+    <Grid Margin="-8,0,8,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="/VistaTabs/fondotranslator.jpg"/>
+        </Grid.Background>
         <Label Content="Juego" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Label x:Name="palabraSelecJuego" Content="Palabra aleatoria" HorizontalAlignment="Left" Margin="107,120,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="2,2,2,2" BorderBrush="Transparent" FontSize="20" Background="#FFB4EFF1" Foreground="#FF005F73" Height="55" Width="182"/>
+        <Label x:Name="palabraSelecJuego" Content="Palabra aleatoria" HorizontalAlignment="Left" Margin="107,120,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="2,2,2,2" BorderBrush="#FF88B6B8" FontSize="20" Background="#FFB4EFF1" Foreground="#FF005F73" Height="55" Width="182"/>
         <TextBox x:Name="campoRespJuego" HorizontalAlignment="Left" Margin="517,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="22" Height="30"/>
         <Button x:Name="btnSigJuego" Content="Siguiente palabra" HorizontalAlignment="Left" Margin="442,266,0,0" VerticalAlignment="Top" FontSize="18" Height="46" Width="182" Click="btnSigJuego_Click" Style="{StaticResource RoundedButtonStyle}" Background="#FFA2ECEE">
             <Button.Effect>
@@ -34,7 +37,7 @@
             </Button.Effect>
         </Button>
         <Label x:Name="labelProgresoJuego" Content="0/10" HorizontalAlignment="Left" Margin="632,169,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
-        <Button x:Name="btnEmpezar" Content="Empezar" HorizontalAlignment="Left" Margin="177,266,0,0" VerticalAlignment="Top" FontSize="18" Height="46" Width="182" Click="btnEmpezar_Click" Style="{StaticResource RoundedButtonStyle}" Background="#FFC4FCA9">
+        <Button x:Name="btnEmpezar" Content="Empezar" HorizontalAlignment="Left" Margin="177,266,0,0" VerticalAlignment="Top" FontSize="18" Height="46" Width="182" Click="btnEmpezar_Click" Style="{StaticResource RoundedButtonStyle}"  Background="#FFD3FFC6" BorderBrush="#FF92B07B">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
             </Button.Effect>
