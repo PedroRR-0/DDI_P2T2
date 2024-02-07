@@ -5,18 +5,46 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:traductor"
              mc:Ignorable="d" 
+             FontFamily="Bahnschrift"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="White">
-        <Label Content="Inglés" HorizontalAlignment="Left" Margin="137,42,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <Label x:Name="palabraSelecJuego" Content="palabra selec" HorizontalAlignment="Left" Margin="142,105,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="2,2,2,2" BorderBrush="#FF14D24C" FontSize="20"/>
-        <TextBox x:Name="campoRespJuego" HorizontalAlignment="Left" Margin="142,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" FontSize="22"/>
-        <Button x:Name="btnSigJuego" Content="Siguiente" HorizontalAlignment="Left" Margin="142,266,0,0" VerticalAlignment="Top" FontSize="22" Height="46" Width="116" Click="btnSigJuego_Click"/>
-        <Label x:Name="labelProgresoJuego" Content="0/10" HorizontalAlignment="Left" Margin="312,271,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
-        <Button x:Name="btnEmpezar" Content="Empezar" HorizontalAlignment="Left" Margin="495,83,0,0" VerticalAlignment="Top" FontSize="24" Height="42" Width="112" Click="btnEmpezar_Click"/>
-        <Label Content="Aciertos" HorizontalAlignment="Left" Margin="470,189,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <Label x:Name="labelAciertos" Content="0" HorizontalAlignment="Left" Margin="579,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,0.116" Foreground="#FF26FF08" FontWeight="Bold" FontSize="24"/>
-        <Label Content="Fallos" HorizontalAlignment="Left" Margin="470,261,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <Label x:Name="labelFallos" Content="0" HorizontalAlignment="Left" Margin="579,258,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="Bold" FontSize="24"/>
+
+    <UserControl.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="White" Margin="-8,0,8,0">
+        <Label Content="Juego" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="palabraSelecJuego" Content="Palabra aleatoria" HorizontalAlignment="Left" Margin="107,120,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="2,2,2,2" BorderBrush="Transparent" FontSize="20" Background="#FFB4EFF1" Foreground="#FF005F73" Height="55" Width="182"/>
+        <TextBox x:Name="campoRespJuego" HorizontalAlignment="Left" Margin="517,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="22" Height="30"/>
+        <Button x:Name="btnSigJuego" Content="Siguiente palabra" HorizontalAlignment="Left" Margin="442,266,0,0" VerticalAlignment="Top" FontSize="18" Height="46" Width="182" Click="btnSigJuego_Click" Style="{StaticResource RoundedButtonStyle}" Background="#FFA2ECEE">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="labelProgresoJuego" Content="0/10" HorizontalAlignment="Left" Margin="632,169,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
+        <Button x:Name="btnEmpezar" Content="Empezar" HorizontalAlignment="Left" Margin="177,266,0,0" VerticalAlignment="Top" FontSize="18" Height="46" Width="182" Click="btnEmpezar_Click" Style="{StaticResource RoundedButtonStyle}" Background="#FFC4FCA9">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
+            </Button.Effect>
+        </Button>
+        <Label Content="Aciertos" HorizontalAlignment="Left" Margin="12,329,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Label x:Name="labelAciertos" Content="0" HorizontalAlignment="Left" Margin="112,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,0.116" Foreground="#FF26FF08" FontWeight="Bold" FontSize="24"/>
+        <Label Content="Fallos" HorizontalAlignment="Left" Margin="164,330,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Label x:Name="labelFallos" Content="0" HorizontalAlignment="Left" Margin="245,330,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="Bold" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="80" Height="81" RenderTransformOrigin="0.526,0.288" Foreground="#FF7E7E7E"><Run Text="&gt;"/><LineBreak/><Run/></TextBlock>
+        <Label Content="Respuesta" HorizontalAlignment="Left" Margin="517,106,0,0" VerticalAlignment="Top" FontSize="13"/>
 
     </Grid>
 </UserControl>
