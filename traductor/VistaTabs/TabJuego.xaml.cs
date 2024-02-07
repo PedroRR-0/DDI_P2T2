@@ -33,6 +33,7 @@ namespace traductor
 
         public void EmpezarJuego()
         {
+            campoRespJuego.Clear();
             contador = 0;
             aciertos = 0;
             fallos = 0;
