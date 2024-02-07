@@ -5,9 +5,31 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:traductor"
              mc:Ignorable="d" 
+             FontFamily="Bahnschrift"
              d:DesignHeight="380" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+
     <Grid Background="White">
-        <ListBox x:Name="listaPalabras" Margin="162,30,162,216">
+        <ListBox x:Name="listaPalabras" Margin="50,126,50,120" FontSize="16" FontFamily="Bahnschrift" Background="#FFFFFFE8" BorderBrush="#FFF6FF5C" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListBox.Effect>
+                <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
+            </ListBox.Effect>
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -18,12 +40,22 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Label Content="Inglés" HorizontalAlignment="Left" Margin="162,0,0,0" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" RenderTransformOrigin="0.477,-0.48"/>
-        <Label Content="Español" HorizontalAlignment="Left" Margin="438,0,0,0" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
-        <TextBox x:Name="campoIngListado" HorizontalAlignment="Left" Margin="162,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="22"/>
-        <TextBox x:Name="campoEspListado" HorizontalAlignment="Left" Margin="438,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="22"/>
-        <Button x:Name="btnAnadListado" Content="Añadir" HorizontalAlignment="Left" Margin="213,265,0,0" VerticalAlignment="Top" Click="btnAnadListado_Click" FontSize="24" Height="47" Width="98"/>
-        <Button x:Name="btnElimListado" Content="Eliminar" HorizontalAlignment="Left" Margin="487,265,0,0" VerticalAlignment="Top" FontSize="24" Height="47" Width="102" Click="btnElimListado_Click"/>
+        <Label Content="Inglés" HorizontalAlignment="Left" Margin="69,68,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" RenderTransformOrigin="0.477,-0.48"/>
+        <Label Content="Español" HorizontalAlignment="Left" Margin="455,68,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="18"/>
+        <TextBox x:Name="campoIngListado" HorizontalAlignment="Left" Margin="133,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="18"/>
+        <TextBox x:Name="campoEspListado" HorizontalAlignment="Left" Margin="535,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="18"/>
+        <Button x:Name="btnAnadListado" Content="Añadir" HorizontalAlignment="Left" Margin="61,288,0,0" VerticalAlignment="Top" Click="btnAnadListado_Click" FontSize="18" Height="46" Width="98"  Style="{StaticResource RoundedButtonStyle}" Background="#FFC8EEC5" FontFamily="Bahnschrift" >
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnElimListado" Content="Eliminar" HorizontalAlignment="Left" Margin="198,288,0,0" VerticalAlignment="Top" FontSize="18" Height="46" Width="102" Click="btnElimListado_Click" Style="{StaticResource RoundedButtonStyle}" Background="#FFF6C1C8"  FontFamily="Bahnschrift">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
+            </Button.Effect>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"><Run Language="es-es" Text="Listado de palabras"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="162,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Height="29" Foreground="#FF7D7D7D"><Run Language="es-es"/><LineBreak/><Run Language="es-es"/><LineBreak/><Run/></TextBlock>
 
     </Grid>
 </UserControl>
