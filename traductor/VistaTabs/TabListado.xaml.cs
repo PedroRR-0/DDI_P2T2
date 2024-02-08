@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -37,6 +38,14 @@ namespace traductor
                 ing = char.ToUpper(ing[0]) + ing.Substring(1);
                 string esp = campoEspListado.Text.Trim();
                 esp = char.ToUpper(esp[0]) + esp.Substring(1);
+                string pattern = @"^[\p{L}\s-]+$";
+                bool matchIng = Regex.IsMatch(ing, pattern);
+                bool matchEsp = Regex.IsMatch(esp, pattern);
+                if(!(matchIng && matchEsp))
+                {
+                    MessageBox.Show("¡Las palabras no llevan números ni símbolos raros!", "Warning", MessageBoxButton.OK, MessageBoxImage.Information);
+                    return;
+                }
                 logica.anadirPalabra(ing, esp);
                 campoIngListado.Clear();
                 campoEspListado.Clear();
