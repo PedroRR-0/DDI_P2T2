@@ -34,6 +34,7 @@ namespace traductor
         public void EmpezarJuego()
         {
             campoRespJuego.Clear();
+            campoRespJuego.IsEnabled = true;
             contador = 0;
             aciertos = 0;
             fallos = 0;
@@ -64,7 +65,9 @@ namespace traductor
 
         private void btnSigJuego_Click(object sender, RoutedEventArgs e)
         {
-            if(contador < 10) { escribirPalabraAleat(); }
+            if(contador < 10) { 
+                escribirPalabraAleat();
+            }
 
         }
 
@@ -78,8 +81,18 @@ namespace traductor
             {
                 fallos++;
             }
-            palabra = palabraAleat(logica.getLista());
-            palabraSelecJuego.Content = palabra.Key;
+            if (contador < 9)
+            {
+                palabra = palabraAleat(logica.getLista());
+                while (palabra.Key.Equals(palabraSelecJuego.Content)){
+                    palabra = palabraAleat(logica.getLista());
+                }
+                palabraSelecJuego.Content = palabra.Key;
+            } else
+            {
+                palabraSelecJuego.Content = "Juego terminado";
+                campoRespJuego.IsEnabled = false;
+            }
             contador++;
             campoRespJuego.Clear();
             setLetreros();
