@@ -30,7 +30,7 @@
         </Grid.Background>
         <Label Content="Juego" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Label x:Name="palabraSelecJuego" Content="Palabra aleatoria" HorizontalAlignment="Left" Margin="39,85,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="2,2,2,2" BorderBrush="#FF88B6B8" FontSize="20" Background="#FFB4EFF1" Foreground="#FF005F73" Height="55" Width="182"/>
-        <TextBox x:Name="campoRespJuego" HorizontalAlignment="Left" Margin="348,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="22" Height="30"/>
+        <TextBox x:Name="campoRespJuego" HorizontalAlignment="Left" Margin="348,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="22" Height="30"/>
         <Button x:Name="btnSigJuego" Content="Siguiente palabra" HorizontalAlignment="Left" Margin="338,233,0,0" VerticalAlignment="Top" FontSize="18" Height="46" Width="182" Click="btnSigJuego_Click" Style="{StaticResource RoundedButtonStyle}" Background="#FFA2ECEE">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
@@ -47,7 +47,7 @@
         <Label Content="Fallos" HorizontalAlignment="Left" Margin="302,313,0,0" VerticalAlignment="Top" FontSize="22"/>
         <Label x:Name="labelFallos" Content="0" HorizontalAlignment="Left" Margin="383,313,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="Bold" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="268,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="80" Height="81" RenderTransformOrigin="0.526,0.288" Foreground="#FF7E7E7E"><Run Text="&gt;"/><LineBreak/><Run/></TextBlock>
-        <Label Content="Respuesta" HorizontalAlignment="Left" Margin="344,69,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Respuesta" HorizontalAlignment="Left" Margin="344,71,0,0" VerticalAlignment="Top" FontSize="16"/>
 
     </Grid>
 </UserControl>
