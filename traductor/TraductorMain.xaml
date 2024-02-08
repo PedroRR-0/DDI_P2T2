@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:tabData="clr-namespace:traductor"
         mc:Ignorable="d"
-        Title="App Traductor" Height="450" Width="800">
+        Title="App Traductor" Height="450" Width="600" Left="350" Top="50">
 
     <Grid Name="grid">
         <TabControl>

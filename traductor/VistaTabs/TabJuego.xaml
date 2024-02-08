@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:traductor"
              mc:Ignorable="d" 
              FontFamily="Bahnschrift"
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="600">
 
     <UserControl.Resources>
         <Style x:Key="RoundedButtonStyle" TargetType="Button">
@@ -28,26 +28,26 @@
         <Grid.Background>
             <ImageBrush ImageSource="/VistaTabs/fondotranslator.jpg"/>
         </Grid.Background>
-        <Label Content="Juego" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Label x:Name="palabraSelecJuego" Content="Palabra aleatoria" HorizontalAlignment="Left" Margin="107,120,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="2,2,2,2" BorderBrush="#FF88B6B8" FontSize="20" Background="#FFB4EFF1" Foreground="#FF005F73" Height="55" Width="182"/>
-        <TextBox x:Name="campoRespJuego" HorizontalAlignment="Left" Margin="517,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="22" Height="30"/>
-        <Button x:Name="btnSigJuego" Content="Siguiente palabra" HorizontalAlignment="Left" Margin="442,266,0,0" VerticalAlignment="Top" FontSize="18" Height="46" Width="182" Click="btnSigJuego_Click" Style="{StaticResource RoundedButtonStyle}" Background="#FFA2ECEE">
+        <Label Content="Juego" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label x:Name="palabraSelecJuego" Content="Palabra aleatoria" HorizontalAlignment="Left" Margin="39,85,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="2,2,2,2" BorderBrush="#FF88B6B8" FontSize="20" Background="#FFB4EFF1" Foreground="#FF005F73" Height="55" Width="182"/>
+        <TextBox x:Name="campoRespJuego" HorizontalAlignment="Left" Margin="348,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="22" Height="30"/>
+        <Button x:Name="btnSigJuego" Content="Siguiente palabra" HorizontalAlignment="Left" Margin="338,233,0,0" VerticalAlignment="Top" FontSize="18" Height="46" Width="182" Click="btnSigJuego_Click" Style="{StaticResource RoundedButtonStyle}" Background="#FFA2ECEE">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
             </Button.Effect>
         </Button>
-        <Label x:Name="labelProgresoJuego" Content="0/10" HorizontalAlignment="Left" Margin="632,169,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
-        <Button x:Name="btnEmpezar" Content="Empezar" HorizontalAlignment="Left" Margin="177,266,0,0" VerticalAlignment="Top" FontSize="18" Height="46" Width="182" Click="btnEmpezar_Click" Style="{StaticResource RoundedButtonStyle}"  Background="#FFD3FFC6" BorderBrush="#FF92B07B">
+        <Label x:Name="labelProgresoJuego" Content="0/10" HorizontalAlignment="Left" Margin="463,132,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
+        <Button x:Name="btnEmpezar" Content="Empezar" HorizontalAlignment="Left" Margin="39,233,0,0" VerticalAlignment="Top" FontSize="18" Height="46" Width="182" Click="btnEmpezar_Click" Style="{StaticResource RoundedButtonStyle}"  Background="#FFD3FFC6" BorderBrush="#FF92B07B">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
             </Button.Effect>
         </Button>
-        <Label Content="Aciertos" HorizontalAlignment="Left" Margin="12,329,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <Label x:Name="labelAciertos" Content="0" HorizontalAlignment="Left" Margin="112,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,0.116" Foreground="#FF26FF08" FontWeight="Bold" FontSize="24"/>
-        <Label Content="Fallos" HorizontalAlignment="Left" Margin="164,330,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <Label x:Name="labelFallos" Content="0" HorizontalAlignment="Left" Margin="245,330,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="Bold" FontSize="24"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="80" Height="81" RenderTransformOrigin="0.526,0.288" Foreground="#FF7E7E7E"><Run Text="&gt;"/><LineBreak/><Run/></TextBlock>
-        <Label Content="Respuesta" HorizontalAlignment="Left" Margin="517,106,0,0" VerticalAlignment="Top" FontSize="13"/>
+        <Label Content="Aciertos" HorizontalAlignment="Left" Margin="150,312,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Label x:Name="labelAciertos" Content="0" HorizontalAlignment="Left" Margin="250,313,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,0.116" Foreground="#FF26FF08" FontWeight="Bold" FontSize="24"/>
+        <Label Content="Fallos" HorizontalAlignment="Left" Margin="302,313,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Label x:Name="labelFallos" Content="0" HorizontalAlignment="Left" Margin="383,313,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="Bold" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="268,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="80" Height="81" RenderTransformOrigin="0.526,0.288" Foreground="#FF7E7E7E"><Run Text="&gt;"/><LineBreak/><Run/></TextBlock>
+        <Label Content="Respuesta" HorizontalAlignment="Left" Margin="344,69,0,0" VerticalAlignment="Top" FontSize="16"/>
 
     </Grid>
 </UserControl>

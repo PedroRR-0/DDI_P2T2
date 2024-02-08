@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:traductor"
              FontFamily="Bahnschrift"
-             mc:Ignorable="d" d:DesignWidth="800" Height="410">
+             mc:Ignorable="d" d:DesignWidth="600" Height="450">
 
     <UserControl.Resources>
         <Style x:Key="RoundedButtonStyle" TargetType="Button">
@@ -27,22 +27,22 @@
         <Grid.Background>
             <ImageBrush ImageSource="/VistaTabs/fondotranslator.jpg"/>
         </Grid.Background>
-        <Label Content="Español a Inglés" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Button x:Name="btnEspIng" Content="Traducir al Inglés" HorizontalAlignment="Center" Margin="0,290,0,0" VerticalAlignment="Top" Height="49" Width="228" Click="btnEspIng_Click" Style="{StaticResource RoundedButtonStyle}"  FontFamily="Bahnschrift" FontSize="18" Background="#FFD3FFC6" BorderBrush="#FF92B07B">
+        <Label Content="Español a Inglés" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Button x:Name="btnEspIng" Content="Traducir al Inglés" HorizontalAlignment="Center" Margin="0,277,0,0" VerticalAlignment="Top" Height="49" Width="228" Click="btnEspIng_Click" Style="{StaticResource RoundedButtonStyle}"  FontFamily="Bahnschrift" FontSize="18" Background="#FFD3FFC6" BorderBrush="#FF92B07B">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="1" Color="#19E0E0E0" Direction="315"/>
             </Button.Effect>
         </Button>
-        <TextBox x:Name="campoEsp" Text="Hola" HorizontalAlignment="Left" Margin="60,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" Height="122" FontSize="20" AutomationProperties.HelpText="Hooala"/>
-        <Label x:Name="labelTradIng" Content="Traducción" HorizontalAlignment="Left" Margin="457,105,0,0" VerticalAlignment="Top" Background="#FFFFFBB3" FontSize="18" Foreground="#FF5D3114" Width="275" Height="124" >
+        <TextBox x:Name="campoEsp" HorizontalAlignment="Left" Margin="48,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Height="54" FontSize="20" AutomationProperties.HelpText="Hooala"/>
+        <Label x:Name="labelTradIng" Content="Traducción" HorizontalAlignment="Left" Margin="340,140,0,0" VerticalAlignment="Top" Background="#FFFFFBB3" FontSize="18" Foreground="#FF5D3114" Width="193" Height="54" >
             <Label.Effect>
                 <DropShadowEffect BlurRadius="1" Color="#FFD4D4D4"/>
             </Label.Effect>
         </Label>
 
-        <Label Content="Español" HorizontalAlignment="Left" Margin="60,68,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#FF6A6A6A"/>
-        <Label Content="Inglés" HorizontalAlignment="Left" Margin="457,68,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#FF6A6A6A"/>
-        <Label Content="&gt;" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="80" Margin="0,107,0,0"/>
+        <Label Content="Español" HorizontalAlignment="Left" Margin="48,95,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#FF6A6A6A"/>
+        <Label Content="Inglés" HorizontalAlignment="Left" Margin="340,95,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#FF6A6A6A"/>
+        <Label Content="&gt;" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="80" Margin="0,114,0,0"/>
 
     </Grid>
 </UserControl>

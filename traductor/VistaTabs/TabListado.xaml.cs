@@ -31,23 +31,35 @@ namespace traductor
 
         private void btnAnadListado_Click(object sender, RoutedEventArgs e)
         {
-            string ing = campoIngListado.Text.Trim();
-            ing = char.ToUpper(ing[0])+ing.Substring(1);
-            string esp = campoEspListado.Text.Trim();
-            esp = char.ToUpper(esp[0]) + esp.Substring(1);
-            logica.anadirPalabra(ing, esp);
-            campoIngListado.Clear();
-            campoEspListado.Clear();
-            refresh();
+            try
+            {
+                string ing = campoIngListado.Text.Trim();
+                ing = char.ToUpper(ing[0]) + ing.Substring(1);
+                string esp = campoEspListado.Text.Trim();
+                esp = char.ToUpper(esp[0]) + esp.Substring(1);
+                logica.anadirPalabra(ing, esp);
+                campoIngListado.Clear();
+                campoEspListado.Clear();
+                refresh();
+            } catch(IndexOutOfRangeException ex)
+            {
+                MessageBox.Show("Rellena los campos Inglés y Español", "Warning", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
                         
         }
 
         private void btnElimListado_Click(object sender, RoutedEventArgs e)
         {
-            KeyValuePair<string, string> palabraSeleccionada = (KeyValuePair<string, string>)listaPalabras.SelectedItem;
+            try
+            {
+                KeyValuePair<string, string> palabraSeleccionada = (KeyValuePair<string, string>)listaPalabras.SelectedItem;
+                logica.borrarPalabra(palabraSeleccionada);
+                refresh();
 
-            logica.borrarPalabra(palabraSeleccionada);
-            refresh();
+            } catch(NullReferenceException ex)
+            {
+                MessageBox.Show("Selecciona un elemento de la lista", "Warning", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
             
         }
 

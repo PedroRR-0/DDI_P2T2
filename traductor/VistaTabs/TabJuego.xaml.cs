@@ -70,9 +70,7 @@ namespace traductor
 
         private void escribirPalabraAleat()
         {
-            palabra = palabraAleat(logica.getLista());
-            palabraSelecJuego.Content = palabra.Key;
-            contador++;
+
             if (campoRespJuego.Text.ToLower().Equals(logica.TraducirEoI(true, palabra.Key).ToLower())){
                 aciertos++;
 
@@ -80,6 +78,10 @@ namespace traductor
             {
                 fallos++;
             }
+            palabra = palabraAleat(logica.getLista());
+            palabraSelecJuego.Content = palabra.Key;
+            contador++;
+            campoRespJuego.Clear();
             setLetreros();
         }
 
