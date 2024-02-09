@@ -52,6 +52,8 @@ namespace traductor
             setLetreros(); // Actualiza los letreros del juego.
             palabra = palabraAleat(logica.getLista()); // Obtiene una palabra aleatoria de la lista de palabras.
             palabraSelecJuego.Content = palabra.Key; // Muestra la palabra en inglés en el letrero de la palabra seleccionada.
+            palabrasUsadas.Add(palabra.Key); // Añade la palabra a la lista de palabras usadas.
+
         }
 
         // Método para actualizar los letreros del juego.

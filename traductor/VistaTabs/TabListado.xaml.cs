@@ -45,7 +45,7 @@ namespace traductor
                 string esp = campoEspListado.Text.Trim();
                 esp = char.ToUpper(esp[0]) + esp.Substring(1);
 
-                // Se verifica que las palabras ingresadas solo contengan letras y espacios.
+                // Se verifica que las palabras ingresadas solo contengan letras y espacios y guión.
                 string pattern = @"^[\p{L}\s-]+$";
                 bool matchIng = Regex.IsMatch(ing, pattern);
                 bool matchEsp = Regex.IsMatch(esp, pattern);
