@@ -27,6 +27,9 @@ namespace traductor
         // Se obtiene la instancia de la clase LogicaDatos.
         private LogicaDatos logica;
 
+        // Controla si la lista de palabras es menor de 10 para no caer en bucle infinito
+        private bool juegoCorto = false;
+
         // Variable para almacenar la palabra actual del juego.
         private KeyValuePair<string, string> palabra;
 
@@ -50,8 +53,10 @@ namespace traductor
             aciertos = 0; // Inicializa los aciertos a 0.
             fallos = 0; // Inicializa los fallos a 0.
             setLetreros(); // Actualiza los letreros del juego.
+            juegoCorto = logica.getLista().Count < 10 ? true : false;
             palabra = palabraAleat(logica.getLista()); // Obtiene una palabra aleatoria de la lista de palabras.
             palabraSelecJuego.Content = palabra.Key; // Muestra la palabra en inglés en el letrero de la palabra seleccionada.
+            palabrasUsadas.Clear(); // Limpiamos la lista al empezar
             palabrasUsadas.Add(palabra.Key); // Añade la palabra a la lista de palabras usadas.
 
         }
@@ -105,9 +110,12 @@ namespace traductor
             {
                 palabra = palabraAleat(logica.getLista()); // Obtiene una nueva palabra aleatoria.
                 // Comprueba si la palabra ya ha sido usada.
-                while (palabrasUsadas.Contains(palabra.Key))
-                { 
-                    palabra = palabraAleat(logica.getLista()); // Obtiene una nueva palabra si la palabra ya ha sido usada.
+                if (!juegoCorto)
+                {
+                    while (palabrasUsadas.Contains(palabra.Key))
+                    {
+                        palabra = palabraAleat(logica.getLista()); // Obtiene una nueva palabra si la palabra ya ha sido usada.
+                    }
                 }
                 palabraSelecJuego.Content = palabra.Key; // Muestra la nueva palabra en el letrero de la palabra seleccionada.
                 palabrasUsadas.Add(palabra.Key); // Añade la palabra a la lista de palabras usadas.
