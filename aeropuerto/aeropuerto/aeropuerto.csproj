@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>resources\img\avion.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources\img\avion.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="resources\img\avion.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\img\avion.png" />
+  </ItemGroup>
+
+</Project>

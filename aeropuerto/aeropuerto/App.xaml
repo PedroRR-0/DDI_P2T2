@@ -1,0 +1,9 @@
+﻿<Application x:Class="aeropuerto.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:aeropuerto"
+             StartupUri="Aeropuerto.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
