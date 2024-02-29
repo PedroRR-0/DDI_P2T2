@@ -16,6 +16,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Windows.Interop;
 
 namespace aeropuerto
 {
@@ -25,6 +27,8 @@ namespace aeropuerto
     public partial class Pasajeros : UserControl
     {
         private Conexion conex = Conexion.getInstance();
+        private int id = 0;
+        DataRowView filaSeleccionada;
         public Pasajeros()
         {
             InitializeComponent();
@@ -66,20 +70,38 @@ namespace aeropuerto
             }
         }
 
+        
+
         private void anadirPasaj_Click(object sender, RoutedEventArgs e)
         {
-            AEPasajeros aeP = new AEPasajeros();
+            AEPasajeros aeP = new AEPasajeros(true,id);
             aeP.ShowDialog();
+            cargarPasajeros();
         }
 
         private void editarPasaj_Click(object sender, RoutedEventArgs e)
         {
-
+            if (filaSeleccionada == null) {
+                MessageBox.Show("Seleccione un pasajero", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+            AEPasajeros aeP = new AEPasajeros(false,id);
+            aeP.ShowDialog();
+            cargarPasajeros();
         }
 
         private void elimPasaj_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void tablaPasaj_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            filaSeleccionada = (DataRowView)tablaPasaj.SelectedItem;
+            if (filaSeleccionada != null)
+            {
+                id = int.Parse(filaSeleccionada["idPasajeros"].ToString());
+            }
         }
     }
 

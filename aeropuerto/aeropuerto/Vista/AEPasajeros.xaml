@@ -5,27 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:aeropuerto.Vista"
         mc:Ignorable="d"
-        Title="Window1" Height="550" Width="300">
-    <Grid Background="#87CEEB">
-        <Button Content="Aceptar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="32,443,0,0" VerticalAlignment="Top"/>
+        Title="Window1" Height="580" Width="400" Left="500" Top="50">
+    <Grid Background="#87CEEB" Margin="0,0,-70,0">
+        <Button Content="Aceptar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="53,482,0,0" VerticalAlignment="Top" Click="Aceptar_Click"/>
 
-        <Button Content="Limpiar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="169,443,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="147,32,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="26,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="Vuelo"/><LineBreak/><Run Language="es-es"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="27,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67"><Run Text="N"/><Run Text="ombre"/><LineBreak/><Run/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="27,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="Primer apellido"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="27,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Segundo apellido"/><LineBreak/><Run/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="27,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Fecha Nacimiento"/><LineBreak/><Run/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="27,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Email"/><LineBreak/><Run/></TextBlock>
-        <TextBox HorizontalAlignment="Left" Margin="147,86,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25"/>
-        <TextBox HorizontalAlignment="Left" Margin="147,133,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25"/>
-        <TextBox HorizontalAlignment="Left" Margin="147,183,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25"/>
-        <TextBox HorizontalAlignment="Left" Margin="147,238,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25"/>
-        <TextBox HorizontalAlignment="Left" Margin="149,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25"/>
-        <TextBlock HorizontalAlignment="Left" Margin="34,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="DNI"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="32,379,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Teléfono"/>
-        <TextBlock HorizontalAlignment="Left" Margin="82,346,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Content="FOTO" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Center" Margin="0,408,0,0" VerticalAlignment="Top" Click="Foto_Click"/>
+        <Button Content="Limpiar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="248,482,0,0" VerticalAlignment="Top" Click="Limpiar_Click"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="boxVuelos" Margin="185,395,0,0" VerticalAlignment="Top" SelectedIndex="0" Width="163">
+
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="27,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="1.857,-3.194"><Run Language="es-es" Text="Vuelo"/><LineBreak/><Run Language="es-es"/></TextBlock>
+
+        <TextBlock HorizontalAlignment="Left" Margin="27,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67"><Run Text="N"/><Run Text="ombre"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="27,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="Primer apellido"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="27,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Segundo apellido"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="27,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Fecha Nacimiento"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="27,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Email"/><LineBreak/><Run/></TextBlock>
+        <TextBox HorizontalAlignment="Left" x:Name="campoNom" Margin="185,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="25"/>
+        <TextBox HorizontalAlignment="Left" x:Name="campoApe1" Margin="185,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="25"/>
+        <TextBox HorizontalAlignment="Left" x:Name="campoApe2" Margin="185,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="25"/>
+        <TextBox HorizontalAlignment="Left" x:Name="campoMail" Margin="185,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="25"/>
+        <TextBlock HorizontalAlignment="Left" Margin="27,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="DNI"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="27,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Teléfono"/>
+        <TextBlock HorizontalAlignment="Left" Margin="82,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="FOTO" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="150,438,0,0" VerticalAlignment="Top" Click="Foto_Click"/>
+        <TextBox HorizontalAlignment="Left" x:Name="campoDNI" Margin="185,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="25"/>
+        <TextBox HorizontalAlignment="Left" x:Name="campoTLF" Margin="185,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="25"/>
+        <DatePicker x:Name="fechaPicker" HorizontalAlignment="Left" Margin="185,171,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="27,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="1.857,-3.194"><Run Language="es-es" Text="Dirección"/><LineBreak/><Run Language="es-es"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" x:Name="campoDir" Margin="185,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="25"/>
 
 
     </Grid>
