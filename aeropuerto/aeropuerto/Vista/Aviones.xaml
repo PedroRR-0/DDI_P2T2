@@ -20,7 +20,13 @@
         </DataGrid>
 
         <Label Content="AVIONES NO OPERATIVOS" HorizontalAlignment="Left" Margin="448,118,0,0" VerticalAlignment="Top"/>
-        <DataGrid x:Name="tablaAvionesNoOp" AutoGenerateColumns="True" CanUserAddRows="False" Margin="448,144,54,105">
+        <DataGrid x:Name="tablaAvionesNoOp" AutoGenerateColumns="False" CanUserAddRows="False" Margin="448,144,54,105">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding idAvion}" />
+                <DataGridTextColumn Header="NºAsientos" Binding="{Binding numAsientos}" />
+                <DataGridTextColumn Header="Matricula" Binding="{Binding matricula}" />
+                <DataGridTextColumn Header="Modelo" Binding="{Binding modelo}" />
+            </DataGrid.Columns>
         </DataGrid>
 
         <!-- Botones -->
