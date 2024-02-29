@@ -6,7 +6,32 @@
              xmlns:local="clr-namespace:aeropuerto"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+    <Grid Background="#87CEEB">
+        <Label Content="Tripulantes Disponibles" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,154,0,0"/>
+        <DataGrid x:Name="tablaTripulantesDisp" AutoGenerateColumns="False" CanUserAddRows="False" Margin="37,207,448,53">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding idTripulacion}" />
+                <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" />
+                <DataGridTextColumn Header="Apellido" Binding="{Binding apellido1}" />
+                <DataGridTextColumn Header="Segundo Apellido" Binding="{Binding apellido2}" />
+                <DataGridTextColumn Header="Categoria"  Binding="{Binding categoria}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <Label Content="Tripulantas Ya Asignados" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="436,162,0,0" RenderTransformOrigin="1.282,0.77"/>
+        <DataGrid x:Name="tablaTripulantesNoDisp" AutoGenerateColumns="False" CanUserAddRows="False" Margin="436,207,49,53">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding idTripulacion}" />
+                <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" />
+                <DataGridTextColumn Header="Apellido" Binding="{Binding apellido1}" />
+                <DataGridTextColumn Header="Segundo Apellido" Binding="{Binding apellido2}" />
+                <DataGridTextColumn Header="Categoria"  Binding="{Binding categoria}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Content="Vuelos Disponibles" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="103,65,0,0"/>
+        <ComboBox x:Name="listaVuelos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="244,69,0,0" Width="140"/>
+
     </Grid>
 </UserControl>
