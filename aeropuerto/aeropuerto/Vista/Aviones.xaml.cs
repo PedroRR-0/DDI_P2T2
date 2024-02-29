@@ -55,15 +55,14 @@ namespace aeropuerto
             }
         }
 
-        private void btnAddOperativo_Click(object sender, RoutedEventArgs e)
+        private void CambiarEstadoAvion(int idAvion, int nuevoEstado)
         {
-            Modelo.Conexion conex = Modelo.Conexion.getInstance();
-            MySqlConnection c = conex.obtenerConexion();
             try
             {
-                DataRowView row = (DataRowView)tablaAvionesNoOp.SelectedItem;
-                int idAvion = Convert.ToInt32(row.Row.ItemArray[0]);
-                String consulta = $"UPDATE aviones SET estado = 1 WHERE idAvion = {idAvion}";
+                Modelo.Conexion conex = Modelo.Conexion.getInstance();
+                MySqlConnection c = conex.obtenerConexion();
+
+                String consulta = $"UPDATE aviones SET estado = CASE WHEN estado = 1 THEN 0 ELSE 1 END WHERE idAvion = {idAvion}";
                 using (MySqlCommand comando = new MySqlCommand(consulta, c))
                 {
                     comando.ExecuteNonQuery();
@@ -78,6 +77,26 @@ namespace aeropuerto
             finally
             {
                 RefreshDatos();
+            }
+        }
+
+        private void btnAddOperativo_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView row = (DataRowView)tablaAvionesNoOp.SelectedItem;
+            if (row != null)
+            {
+                int idAvion = Convert.ToInt32(row.Row.ItemArray[0]);
+                CambiarEstadoAvion(idAvion, 1); 
+            }
+        }
+
+        private void btnRemoveOperativo_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView row = (DataRowView)tablaAvionesOp.SelectedItem;
+            if (row != null)
+            {
+                int idAvion = Convert.ToInt32(row.Row.ItemArray[0]);
+                CambiarEstadoAvion(idAvion, 0); 
             }
         }
 
