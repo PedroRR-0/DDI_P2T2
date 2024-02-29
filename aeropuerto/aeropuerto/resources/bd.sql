@@ -1,4 +1,4 @@
-aeropuertoCREATE OR REPLACE DATABASE aeropuertocharp;
+CREATE OR REPLACE DATABASE aeropuertocharp;
 USE aeropuertocharp;
 
 CREATE OR REPLACE TABLE usuario (
