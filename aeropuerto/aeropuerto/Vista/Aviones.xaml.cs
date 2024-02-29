@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySqlConnector;
+using System;
+using System.Data.Common;
+using System.Data;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace aeropuerto
 {
@@ -23,6 +16,75 @@ namespace aeropuerto
         public Aviones()
         {
             InitializeComponent();
+            RefreshDatos();
+        }
+
+        private void CargarAviones(bool estado)
+        {
+            try
+            {
+                Modelo.Conexion conex = Modelo.Conexion.getInstance();
+                MySqlConnection c = conex.obtenerConexion();
+
+                string consulta = $"SELECT idAvion, numAsientos, matricula, modelo FROM aviones WHERE estado = {Convert.ToInt32(estado)}";
+                using (DbCommand comando = new MySqlCommand(consulta, c))
+                {
+                    // Crear el adaptador de datos y llenar el DataTable
+                    using (DbDataAdapter adaptador = new MySqlDataAdapter((MySqlCommand)comando))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adaptador.Fill(dataTable);
+
+                        if (estado)
+                        {
+                            tablaAvionesOp.ItemsSource = null;
+                            tablaAvionesOp.ItemsSource = dataTable.DefaultView;
+                        }
+                        else
+                        {
+                            tablaAvionesNoOp.ItemsSource = null;
+                            tablaAvionesNoOp.ItemsSource = dataTable.DefaultView;
+                        }
+                    }
+                }
+                c.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar datos desde la base de datos: " + ex.Message);
+            }
+        }
+
+        private void btnAddOperativo_Click(object sender, RoutedEventArgs e)
+        {
+            Modelo.Conexion conex = Modelo.Conexion.getInstance();
+            MySqlConnection c = conex.obtenerConexion();
+            try
+            {
+                DataRowView row = (DataRowView)tablaAvionesNoOp.SelectedItem;
+                int idAvion = Convert.ToInt32(row.Row.ItemArray[0]);
+                String consulta = $"UPDATE aviones SET estado = 1 WHERE idAvion = {idAvion}";
+                using (MySqlCommand comando = new MySqlCommand(consulta, c))
+                {
+                    comando.ExecuteNonQuery();
+                    Console.WriteLine("Se actualizó");
+                }
+                c.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+            finally
+            {
+                RefreshDatos();
+            }
+        }
+
+        private void RefreshDatos()
+        {
+            CargarAviones(true);
+            CargarAviones(false);
         }
     }
 }
