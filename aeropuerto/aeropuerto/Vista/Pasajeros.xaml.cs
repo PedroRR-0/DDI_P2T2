@@ -26,18 +26,6 @@ namespace aeropuerto
         public Pasajeros()
         {
             InitializeComponent();
-            MySqlConnection c = conex.obtenerConexion();
-            try
-            {
-                String consulta = "insert into aviones (numAsientos, matricula, estado, modelo) values(12,'123',1,'jet')";
-                using (MySqlCommand comando = new MySqlCommand(consulta, c))
-                {
-                    comando.ExecuteNonQuery();
-                    Console.WriteLine("Se insertó");
-                }
-            }catch(Exception ex) {
-                Console.WriteLine("Error de conexión: " + ex.Message);
-            }
 
         }
     }
