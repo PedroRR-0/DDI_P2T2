@@ -58,6 +58,7 @@ namespace aeropuerto
                         tablaPasaj.ItemsSource = dataTable.DefaultView;
                     }
                 }
+                conex.cerrarConexion();
             }
             catch (Exception ex)
             {
@@ -67,7 +68,8 @@ namespace aeropuerto
 
         private void anadirPasaj_Click(object sender, RoutedEventArgs e)
         {
-
+            AEPasajeros aeP = new AEPasajeros();
+            aeP.ShowDialog();
         }
 
         private void editarPasaj_Click(object sender, RoutedEventArgs e)

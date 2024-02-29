@@ -53,6 +53,7 @@ namespace aeropuerto
 
                     }
                 }
+                conex.cerrarConexion();
             }
 
             catch (Exception ex) { MessageBox.Show("Error al cargar datos desde la base de datos: " + ex.Message); }
