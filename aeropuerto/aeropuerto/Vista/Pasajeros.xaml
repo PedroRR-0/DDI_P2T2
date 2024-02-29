@@ -8,14 +8,16 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#87CEEB">
     <!-- Tabla con los campos IDVUELO, IDAVION, ORIGEN, DESTINO, FECHA, SALIDA y LLEGADA -->
-        <DataGrid x:Name="tablaPasaj" ItemsSource="{Binding colecPasaj}" AutoGenerateColumns="False" CanUserAddRows="False" Margin="35,25,35,55">
+        <DataGrid x:Name="tablaPasaj" AutoGenerateColumns="False" CanUserAddRows="False" Margin="35,25,35,55">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="IDAVION" Binding="{Binding IDAVION}"/>
-                <DataGridTextColumn Header="ORIGEN" Binding="{Binding ORIGEN}"/>
-                <DataGridTextColumn Header="DESTINO" Binding="{Binding DESTINO}"/>
-                <DataGridTextColumn Header="FECHA" Binding="{Binding FECHA}"/>
-                <DataGridTextColumn Header="SALIDA" Binding="{Binding SALIDA}"/>
-                <DataGridTextColumn Header="LLEGADA" Binding="{Binding LLEGADA}"/>
+                <DataGridTextColumn Header="ID" Binding="{Binding idPasajeros}"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}"/>
+                <DataGridTextColumn Header="Apellidos" Binding="{Binding apellidos}"/>
+                <DataGridTextColumn Header="Edad" Binding="{Binding edad}"/>
+                <DataGridTextColumn Header="TLF" Binding="{Binding telefono}"/>
+                <DataGridTextColumn Header="Direccion" Binding="{Binding direccion}"/>
+                <DataGridTextColumn Header="DNI" Binding="{Binding dni}"/>
+                <DataGridTextColumn Header="EMAIL" Binding="{Binding ecorreo}"/>
             </DataGrid.Columns>
         </DataGrid>
 

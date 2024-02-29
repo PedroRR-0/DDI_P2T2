@@ -39,7 +39,7 @@ namespace aeropuerto
                 MySqlConnection c = conex.obtenerConexion();
 
                 // Crear el comando SQL
-                string consulta = "SELECT * FROM pasajeros";
+                string consulta = "SELECT idPasajeros, nombre, concat(apellido1,' ',apellido2) AS apellidos, edad(fechaNacimiento) as edad, telefono, direccion, dni, ecorreo FROM pasajeros";
                 using (DbCommand comando = new MySqlCommand(consulta, c))
                 {
                     // Crear el adaptador de datos y llenar el DataTable
