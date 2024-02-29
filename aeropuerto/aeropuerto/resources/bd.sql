@@ -12,7 +12,7 @@ CREATE OR REPLACE TABLE aviones (
   idAvion INT AUTO_INCREMENT,
   numAsientos INT,
   matricula VARCHAR(6) UNIQUE,
-  estado TINYINT(1),
+  estado BOOLEAN,
   modelo VARCHAR(50),
   PRIMARY KEY (idAvion)
   );
