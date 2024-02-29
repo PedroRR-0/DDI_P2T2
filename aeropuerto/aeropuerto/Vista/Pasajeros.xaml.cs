@@ -39,7 +39,11 @@ namespace aeropuerto
                 MySqlConnection c = conex.obtenerConexion();
 
                 // Crear el comando SQL
-                string consulta = "SELECT idPasajeros, nombre, concat(apellido1,' ',apellido2) AS apellidos, edad(fechaNacimiento) as edad, telefono, direccion, dni, ecorreo FROM pasajeros";
+                string consulta = "SELECT p.idPasajeros, nombre, concat(apellido1,' ',apellido2) AS apellidos, edad(fechaNacimiento) as edad, telefono, direccion, dni, ecorreo, " +
+                    "CONCAT(v.idVuelo,': ', t.origen,'-',t.destino) AS vuelo FROM pasajeros p " +
+                    "JOIN pasajeros_vuelos pv ON p.idPasajeros = pv.idPasajeros " +
+                    "JOIN vuelos v ON v.idVuelo = pv.idVuelo " +
+                    "JOIN trayectos t ON v.idTrayecto = t.idTrayecto;";
                 using (DbCommand comando = new MySqlCommand(consulta, c))
                 {
                     // Crear el adaptador de datos y llenar el DataTable
@@ -59,6 +63,21 @@ namespace aeropuerto
             {
                 MessageBox.Show("Error al cargar datos desde la base de datos: " + ex.Message);
             }
+        }
+
+        private void anadirPasaj_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void editarPasaj_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void elimPasaj_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 
