@@ -1,5 +1,5 @@
-aeropuertoCREATE OR REPLACE DATABASE aeropuerto;
-USE aeropuerto;
+aeropuertoCREATE OR REPLACE DATABASE aeropuertocharp;
+USE aeropuertocharp;
 
 CREATE OR REPLACE TABLE usuario (
   ID_USUARIO INT AUTO_INCREMENT,
