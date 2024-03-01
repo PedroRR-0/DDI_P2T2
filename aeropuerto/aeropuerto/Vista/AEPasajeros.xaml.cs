@@ -59,6 +59,9 @@ namespace aeropuerto
                                 campoApe2.Text = reader["apellido2"].ToString();
                                 campoDir.Text = reader["direccion"].ToString();
                                 campoDNI.Text = reader["dni"].ToString();
+                                campoMail.Text = reader["ecorreo"].ToString();
+                                campoTLF.Text = reader["telefono"].ToString();
+                                //fechaPicker.SelectedDate = reader["fechaNacimiento"].ToString();
                                 // Y así sucesivamente para todas las columnas necesarias
                             }
                             else
@@ -182,7 +185,56 @@ namespace aeropuerto
 
         private void modifPasaj()
         {
-            
+            try
+            {
+                MySqlConnection c = conex.obtenerConexion();
+
+                // Crear el comando SQL
+                string consulta = "update pasajeros set nombre = @nombre, apellido1 = @apellido1, apellido2 = @apellido2, " +
+                    "fechaNacimiento = @fechaNacimiento, ecorreo = @ecorreo, telefono = @telefono, direccion = @direccion, dni = @dni " +
+                    "where idPasajeros = @idpasajero";
+                using (MySqlCommand comando = new MySqlCommand(consulta, c))
+                {
+                    comando.Parameters.AddWithValue("@nombre", campoNom.Text);
+                    comando.Parameters.AddWithValue("@apellido1", campoApe1.Text);
+                    comando.Parameters.AddWithValue("@apellido2", campoApe2.Text);
+                    comando.Parameters.AddWithValue("@fechaNacimiento", fechaPicker.SelectedDate);
+                    comando.Parameters.AddWithValue("@ecorreo", campoMail.Text);
+                    comando.Parameters.AddWithValue("@telefono", campoTLF.Text);
+                    comando.Parameters.AddWithValue("@direccion", campoDir.Text);
+                    comando.Parameters.AddWithValue("@dni", campoDNI.Text);
+                    comando.Parameters.AddWithValue("@idpasajero", id);
+                    comando.ExecuteNonQuery();
+
+                }
+                consulta = "select idAvion from vuelos where idVuelo = @idvuelo";
+                string idAvion;
+                string idVuelo = boxVuelos.SelectedItem as string;
+                char idVuelochar = idVuelo[0];
+                int idVuelo2 = (int)(idVuelochar - '0');
+                using (MySqlCommand comando = new MySqlCommand(consulta, c))
+                {
+                    comando.Parameters.AddWithValue("@idvuelo", idVuelo2);
+                    idAvion = comando.ExecuteScalar().ToString();
+
+                }
+                consulta = "update pasajeros_vuelos set idVuelo = @idvuelo, idAvion = @idavion where idPasajeros = @idpasajero";
+                using (MySqlCommand comando = new MySqlCommand(consulta, c))
+                {
+                    comando.Parameters.AddWithValue("@idvuelo", Convert.ToInt32(idVuelo2));
+                    comando.Parameters.AddWithValue("@idavion", idAvion);
+                    comando.Parameters.AddWithValue("@idpasajero", id);
+                    comando.ExecuteNonQuery();
+
+                }
+                conex.cerrarConexion();
+                string msg = "Editado correctamente";
+                MessageBox.Show(msg, "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar: " + ex.Message);
+            }
         }
         private void rellenarVuelos()
         {

@@ -92,7 +92,31 @@ namespace aeropuerto
 
         private void elimPasaj_Click(object sender, RoutedEventArgs e)
         {
+            if (filaSeleccionada == null)
+            {
+                MessageBox.Show("Seleccione un pasajero", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+            try
+            {
+                MySqlConnection c = conex.obtenerConexion();
 
+                // Crear el comando SQL
+                string consulta = "delete from pasajeros where idPasajeros=@idp";
+                using (MySqlCommand comando = new MySqlCommand(consulta, c))
+                {
+                    comando.Parameters.AddWithValue("@idp", id);
+                    comando.ExecuteNonQuery();
+                    
+                }
+                MessageBox.Show("Eliminado", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                conex.cerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar: " + ex.Message);
+            }
+            cargarPasajeros();
         }
 
         private void tablaPasaj_SelectionChanged(object sender, SelectionChangedEventArgs e)
