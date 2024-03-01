@@ -4,31 +4,55 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:aeropuerto"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#87CEEB">
-        
-        <DataGrid x:Name="tablaTripulantes" AutoGenerateColumns="False" CanUserAddRows="False" Margin="33,51,33,67">
+             mc:Ignorable="d"
+             FontFamily="Yu Gothic UI"
+             d:DesignHeight="500" d:DesignWidth="1100">
+    <Grid Background="#FFFFFF">
+        <TextBlock HorizontalAlignment="Left" Margin="22,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"><Run Language="es-es" Text="Tripulantes"/></TextBlock>
+
+        <DataGrid x:Name="tablaTripulantes" AutoGenerateColumns="False" CanUserAddRows="False" Margin="10,64,10,102"
+                 AlternatingRowBackground="#d4e5ff" RowHeaderWidth="0" ColumnWidth="*" BorderBrush="#0077BB" BorderThickness="1" Background="#F9F9FA">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding idTripulacion}" />
-                <DataGridTextColumn Header="CorreoE" Binding="{Binding ecorreo}" />
+                <DataGridTextColumn Header="Email" Binding="{Binding ecorreo}" />
                 <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" />
                 <DataGridTextColumn Header="Apellido" Binding="{Binding apellido1}" />
-                <DataGridTextColumn Header="Segundo Apellido" Binding="{Binding apellido2}" />
+                <DataGridTextColumn Header="2ºApellido" Binding="{Binding apellido2}" />
                 <DataGridTextColumn Header="Telefono" Binding="{Binding telefono}" />
-                <DataGridTextColumn Header="Fecha Nacimiento" Binding="{Binding fechaNacimiento}" />
+                <DataGridTextColumn Header="F. Nacimiento" Binding="{Binding fechaNacimiento}" />
                 <DataGridTextColumn Header="Categoria"  Binding="{Binding categoria}" />
                 <DataGridTextColumn Header="Direccion" Binding="{Binding direccion}" />
             </DataGrid.Columns>
+
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+            </DataGrid.CellStyle>
+
+            <!-- Diseño para las cabeceras de columna -->
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#003366"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderBrush" Value="#003366"/>
+                    <Setter Property="BorderThickness" Value="0,0,0,0"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
         </DataGrid>
 
 
         <!-- Botones -->
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="215,0,245,10">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="230,450,230,0">
             <Button Content="Añadir" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" Margin="5" Padding="5" HorizontalAlignment="Left" Click="AñadirTripulante"  />
             <Button Content="Editar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" Margin="5" Padding="5" HorizontalAlignment="Left" Click="EditarTripulante" />
             <Button Content="Eliminar" Click="EliminarTripulante" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" Margin="5" Padding="5" HorizontalAlignment="Left" />
         </StackPanel>
-        
+
     </Grid>
 </UserControl>

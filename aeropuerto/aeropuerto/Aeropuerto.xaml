@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:tabData="clr-namespace:aeropuerto"
         mc:Ignorable="d"
-        Title="Gestión Aeropuerto"  Height="450" Width="800" Left="350" Top="50">
+        FontFamily="Yu Gothic UI"
+        Title="Gestión Aeropuerto"  Height="600" Width="1100" Left="350" Top="50">
     <Grid Name="grid">
         <TabControl>
             <TabItem Header="Aviones">

@@ -5,10 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:aeropuerto"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#87CEEB">
-    <!-- Tabla con los campos IDVUELO, IDAVION, ORIGEN, DESTINO, FECHA, SALIDA y LLEGADA -->
-        <DataGrid x:Name="tablaPasaj" FontSize="14" CanUserDeleteRows="False" CanUserResizeRows="False" AutoGenerateColumns="False" CanUserAddRows="False" Margin="35,25,35,55" SelectionChanged="tablaPasaj_SelectionChanged">
+             d:DesignHeight="500" d:DesignWidth="1100">
+    <Grid Background="#FFFFFF">
+        <TextBlock HorizontalAlignment="Left" Margin="22,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"><Run Language="es-es" Text="Vuelos"/></TextBlock>
+        <!-- Tabla con los campos IDVUELO, IDAVION, ORIGEN, DESTINO, FECHA, SALIDA y LLEGADA -->
+        <DataGrid x:Name="tablaPasaj" FontSize="14" CanUserDeleteRows="False" CanUserResizeRows="False" AutoGenerateColumns="False" CanUserAddRows="False" Margin="10,64,10,102" SelectionChanged="tablaPasaj_SelectionChanged"
+                  AlternatingRowBackground="#d4e5ff" RowHeaderWidth="0" ColumnWidth="*" BorderBrush="#0077BB" BorderThickness="1"
+                  Background="#F9F9FA">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding idPasajeros}"/>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}"/>
@@ -20,6 +23,27 @@
                 <DataGridTextColumn Header="EMAIL" Binding="{Binding ecorreo}"/>
                 <DataGridTextColumn Header="Vuelo" Binding="{Binding vuelo}"/>
             </DataGrid.Columns>
+
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+            </DataGrid.CellStyle>
+
+            <!-- Diseño para las cabeceras de columna -->
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#003366"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderBrush" Value="#003366"/>
+                    <Setter Property="BorderThickness" Value="0,0,0,0"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
         </DataGrid>
 
     <!-- Botones -->
