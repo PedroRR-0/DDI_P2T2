@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="bgav.jpg" />
     <None Remove="resources\img\avion.png" />
   </ItemGroup>
 
@@ -22,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="bgav.jpg" />
     <Resource Include="resources\img\avion.png" />
   </ItemGroup>
 

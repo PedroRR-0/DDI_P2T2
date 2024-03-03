@@ -7,7 +7,10 @@
              mc:Ignorable="d"
              FontFamily="Yu Gothic UI"
              d:DesignHeight="500" d:DesignWidth="1100">
-    <Grid Background="#FFFFFF">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/bgav.jpg"/>
+        </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Margin="22,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"><Run Language="es-es" Text="Tripulantes"/></TextBlock>
 
         <DataGrid x:Name="tablaTripulantes" AutoGenerateColumns="False" CanUserAddRows="False" Margin="10,64,10,102"
@@ -48,10 +51,10 @@
 
 
         <!-- Botones -->
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="230,450,230,0">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="389,450,71,0">
             <Button Content="Añadir" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" Margin="5" Padding="5" HorizontalAlignment="Left" Click="AñadirTripulante"  />
             <Button Content="Editar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" Margin="5" Padding="5" HorizontalAlignment="Left" Click="EditarTripulante" />
-            <Button Content="Eliminar" Click="EliminarTripulante" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" Margin="5" Padding="5" HorizontalAlignment="Left" />
+            <Button Content="Eliminar" Click="EliminarTripulante" Width="100" Height="30" Background="#FFF64E3A" Foreground="White" BorderBrush="#FFFF5B5B" BorderThickness="2" Margin="5" Padding="5" HorizontalAlignment="Left" />
         </StackPanel>
 
     </Grid>

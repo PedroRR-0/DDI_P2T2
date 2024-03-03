@@ -16,7 +16,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="18,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="SEGUNDO APELLIDO:"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="18,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="FECHA"/><Run Language="es-es" Text=" NACIMIENTO"/><Run Text=":"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="18,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="DIRECCI"/><Run Language="es-es" Text="Ó"/><Run Text="N"/><Run Text=":"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="18,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="CORREO ELECTRÓNICO"/><Run Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="18,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="EMAIL"/><Run Text=":"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="18,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="TELÉFONO"/><Run Text=":"/></TextBlock>
         <TextBox HorizontalAlignment="Left" x:Name="apellidoTB" Margin="147,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
         <TextBox HorizontalAlignment="Left" x:Name="segundoApellidoTB" Margin="147,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
@@ -25,7 +25,7 @@
         <TextBox HorizontalAlignment="Left" x:Name="telefonoTB" Margin="147,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25" RenderTransformOrigin="0.474,-0.305"/>
         <Button Content="Editar" x:Name="editar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="32,379,0,0" VerticalAlignment="Top" Click="editar_Click"/>
         <DatePicker HorizontalAlignment="Left" x:Name="fechaNacTB" Margin="147,204,0,0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="18,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.524,-0.217"><Run Language="es-es" Text="Categoría"/><Run Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="18,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.524,-0.217"><Run Text="C"/><Run Language="es-es" Text="ATEGORIA"/><Run Text=":"/></TextBlock>
         <TextBox HorizontalAlignment="Left" x:Name="categoriaTB" Margin="147,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25" RenderTransformOrigin="0.474,-0.305" />
 
     </Grid>

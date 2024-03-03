@@ -15,7 +15,7 @@
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="27,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="1.857,-3.194"><Run Language="es-es" Text="Vuelo"/><LineBreak/><Run Language="es-es"/></TextBlock>
 
-        <TextBlock HorizontalAlignment="Left" Margin="27,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67"><Run Text="N"/><Run Text="ombre"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="27,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67"><Run Text="N"/><Run Language="es-es" Text="ombre"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="27,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="Primer apellido"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="27,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Segundo apellido"/><LineBreak/><Run/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="27,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Fecha Nacimiento"/><LineBreak/><Run/></TextBlock>
@@ -27,7 +27,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="27,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="DNI"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="27,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Teléfono"/>
         <TextBlock HorizontalAlignment="Left" Margin="82,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Content="FOTO" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="150,438,0,0" VerticalAlignment="Top" Click="Foto_Click"/>
         <TextBox HorizontalAlignment="Left" x:Name="campoDNI" Margin="185,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="25"/>
         <TextBox HorizontalAlignment="Left" x:Name="campoTLF" Margin="185,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="25"/>
         <DatePicker x:Name="fechaPicker" HorizontalAlignment="Left" Margin="185,171,0,0" VerticalAlignment="Top"/>

@@ -8,7 +8,10 @@
              FontFamily="Yu Gothic UI"
              d:DesignHeight="500" d:DesignWidth="1100">
 
-    <Grid Background="#FFFFFF">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/bgav.jpg"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="96*"/>
             <RowDefinition Height="29*"/>
