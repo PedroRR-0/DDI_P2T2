@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:aeropuerto.Vista"
         mc:Ignorable="d"
-        Title="Áñadir Tripulante" Height="450" Width="300">
+        Title="Tripulante" Height="480" Width="400" Left="500" Top="50">
     <Grid Background="#87CEEB" Margin="0,2,0,-2">
-        <Button Content="Aceptar" x:Name="aceptar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="32,379,0,0" VerticalAlignment="Top" Click="aceptar_Click"/>
+        <Button Content="Aceptar" x:Name="aceptar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="68,388,0,0" VerticalAlignment="Top" Click="aceptar_Click"/>
 
-        <Button Content="Limpiar" x:Name="limpiar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="170,379,0,0" VerticalAlignment="Top" Click="limpiar_Click"/>
-        <TextBox HorizontalAlignment="Left" x:Name="nombreTB" Margin="147,67,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
+        <Button Content="Limpiar" x:Name="limpiar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="253,388,0,0" VerticalAlignment="Top" Click="limpiar_Click"/>
+        <TextBox HorizontalAlignment="Left" x:Name="nombreTB" Margin="190,69,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
         <TextBlock HorizontalAlignment="Left" Margin="18,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.524,-0.217"><Run Text="NOMBR"/><Run Language="es-es" Text="E"/><Run Text=":"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="18,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="APELLIDO:"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="18,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="SEGUNDO APELLIDO:"/></TextBlock>
@@ -18,15 +18,15 @@
         <TextBlock HorizontalAlignment="Left" Margin="18,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="DIRECCI"/><Run Language="es-es" Text="Ó"/><Run Text="N"/><Run Text=":"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="18,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="EMAIL"/><Run Text=":"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="18,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="TELÉFONO"/><Run Text=":"/></TextBlock>
-        <TextBox HorizontalAlignment="Left" x:Name="apellidoTB" Margin="147,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
-        <TextBox HorizontalAlignment="Left" x:Name="segundoApellidoTB" Margin="147,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
-        <TextBox HorizontalAlignment="Left" x:Name="direccionTB" Margin="147,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
-        <TextBox HorizontalAlignment="Left" x:Name="correoTB" Margin="151,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25" RenderTransformOrigin="0.474,-0.305"/>
-        <TextBox HorizontalAlignment="Left" x:Name="telefonoTB" Margin="147,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25" RenderTransformOrigin="0.474,-0.305"/>
-        <Button Content="Editar" x:Name="editar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="32,379,0,0" VerticalAlignment="Top" Click="editar_Click"/>
-        <DatePicker HorizontalAlignment="Left" x:Name="fechaNacTB" Margin="147,204,0,0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="18,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.524,-0.217"><Run Text="C"/><Run Language="es-es" Text="ATEGORIA"/><Run Text=":"/></TextBlock>
-        <TextBox HorizontalAlignment="Left" x:Name="categoriaTB" Margin="147,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25" RenderTransformOrigin="0.474,-0.305" />
+        <TextBox HorizontalAlignment="Left" x:Name="apellidoTB" Margin="190,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
+        <TextBox HorizontalAlignment="Left" x:Name="segundoApellidoTB" Margin="190,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
+        <TextBox HorizontalAlignment="Left" x:Name="direccionTB" Margin="190,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
+        <TextBox HorizontalAlignment="Left" x:Name="correoTB" Margin="190,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25" RenderTransformOrigin="0.474,-0.305"/>
+        <TextBox HorizontalAlignment="Left" x:Name="telefonoTB" Margin="190,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25" RenderTransformOrigin="0.474,-0.305"/>
+        <Button Content="Editar" x:Name="editar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="68,388,0,0" VerticalAlignment="Top" Click="editar_Click"/>
+        <DatePicker HorizontalAlignment="Left" x:Name="fechaNacTB" Margin="190,204,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="18,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.524,-0.217"><Run Text="C"/><Run Text="ATEGOR"/><Run Language="es-es" Text="Í"/><Run Text="A"/><Run Text=":"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" x:Name="categoriaTB" Margin="190,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25" RenderTransformOrigin="0.474,-0.305" />
 
     </Grid>
 </Window>

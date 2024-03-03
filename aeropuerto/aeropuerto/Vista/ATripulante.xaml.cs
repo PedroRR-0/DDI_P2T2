@@ -160,7 +160,7 @@ namespace aeropuerto.Vista
         {
 
             // 'azafato','piloto','copiloto','ingeniero de vuelo'
-            if (categoria == "piloto" || categoria == "copiloto" || categoria == "ingeniero de vuelo" || categoria == "Azafato")
+            if (categoria == "piloto" || categoria == "copiloto" || categoria == "ingeniero de vuelo" || categoria == "azafato")
             {
                 return true;
             }

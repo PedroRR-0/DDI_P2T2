@@ -5,25 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:aeropuerto.Vista"
         mc:Ignorable="d"
-        Title="AEVuelos" Height="450" Width="300">
+        Title="AEVuelos" Height="480" Width="400" Left="500" Top="50">
     <Grid Background="#87CEEB" Margin="0,2,0,-2">
-        <Button Content="Aceptar" x:Name="aceptar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="32,379,0,0" VerticalAlignment="Top" Click="aceptar_Click"/>
+        <Button Content="Aceptar" x:Name="aceptar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="68,378,0,0" VerticalAlignment="Top" Click="aceptar_Click"/>
 
-        <Button Content="Limpiar" x:Name="limpiar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="170,379,0,0" VerticalAlignment="Top" Click="limpiar_Click"/>
-        <ComboBox HorizontalAlignment="Left" x:Name="idAvion" Margin="147,58,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Limpiar" x:Name="limpiar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="250,378,0,0" VerticalAlignment="Top" Click="limpiar_Click"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="idAvion" Margin="190,58,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="26,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-es" Text="ID AVION:"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="27,108,0,0" TextWrapping="Wrap" Text="ORIGEN:" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="27,158,0,0" TextWrapping="Wrap" Text="DESTINO:" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="27,208,0,0" TextWrapping="Wrap" Text="FECHA:" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="27,263,0,0" TextWrapping="Wrap" Text="HORA DE SALIDA:" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="27,313,0,0" TextWrapping="Wrap" Text="HORA DE LLEGADA:" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" x:Name="origen" Margin="147,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25" TextChanged="origen_TextChanged"/>
-        <TextBox HorizontalAlignment="Left" x:Name="destino" Margin="147,153,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25"/>
-        <TextBox HorizontalAlignment="Left" x:Name="hora_salida" Margin="147,258,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25"/>
-        <TextBox HorizontalAlignment="Left" x:Name="hora_llegada" Margin="149,308,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25"/>
-        <Button Content="Editar" x:Name="editar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="32,378,0,0" VerticalAlignment="Top" Click="editar_Click"/>
-        <DatePicker HorizontalAlignment="Left" x:Name="fecha" Margin="147,204,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" x:Name="idTrayectos" Margin="147,18,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="idAvion_Copiar_SelectionChanged"/>
+        <TextBox HorizontalAlignment="Left" x:Name="origen" Margin="190,105,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25" TextChanged="origen_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" x:Name="destino" Margin="190,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25"/>
+        <TextBox HorizontalAlignment="Left" x:Name="hora_salida" Margin="190,260,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25"/>
+        <TextBox HorizontalAlignment="Left" x:Name="hora_llegada" Margin="190,310,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="25"/>
+        <Button Content="Editar" x:Name="editar" Width="100" Height="30" Background="#003366" Foreground="White" BorderBrush="#001a33" BorderThickness="2" HorizontalAlignment="Left" Margin="68,378,0,0" VerticalAlignment="Top" Click="editar_Click"/>
+        <DatePicker HorizontalAlignment="Left" x:Name="fecha" Margin="190,204,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="idTrayectos" Margin="190,18,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="idAvion_Copiar_SelectionChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="26,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="ID "/><Run Language="es-es" Text="TRATECTO"/><Run Text=":"/></TextBlock>
 
 
