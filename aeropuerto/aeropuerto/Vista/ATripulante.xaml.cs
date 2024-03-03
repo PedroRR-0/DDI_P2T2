@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,11 +23,12 @@ namespace aeropuerto.Vista
     public partial class ATripulante : Window
     {
         private DataRowView filaSeleccionada;
+        
 
         public ATripulante(Boolean modo, DataRowView filaSeleccionada = null)
         {
             InitializeComponent();
-
+            
             if (modo)
             {
                 limpiarCampos();
@@ -45,7 +47,7 @@ namespace aeropuerto.Vista
 
         private void rellenarCampos(DataRowView filaSeleccionada)
         {
-            categoriaTB.Text = filaSeleccionada["categoria"].ToString();
+            categoriaTB.SelectedItem = filaSeleccionada["categoria"].ToString();
             nombreTB.Text = filaSeleccionada["nombre"].ToString();
             apellidoTB.Text = filaSeleccionada["apellido1"].ToString();
             segundoApellidoTB.Text = filaSeleccionada["apellido2"].ToString();
@@ -60,9 +62,11 @@ namespace aeropuerto.Vista
             limpiarCampos();
         }
 
+       
+
         private void editar_Click(object sender, RoutedEventArgs e)
         {
-            string categoria = categoriaTB.Text;
+            string categoria = categoriaTB.Text.ToLower();
             string nombre = nombreTB.Text;
             string apellido = apellidoTB.Text;
             string segundoApellido = segundoApellidoTB.Text;
@@ -74,7 +78,7 @@ namespace aeropuerto.Vista
 
             int idTripulante = Convert.ToInt32(filaSeleccionada["idTripulacion"]);
 
-            if (categoria != "" && comprobarCategoria(categoria) && nombre != "" && apellido != "" && segundoApellido != "" && direccion != "" && correo != "" && telefono != "")
+            if (categoria != "" && nombre != "" && apellido != "" && segundoApellido != "" && direccion != "" && correo != "" && telefono != "")
             {
                 try
                 {
@@ -112,11 +116,11 @@ namespace aeropuerto.Vista
 
         private void aceptar_Click(object sender, RoutedEventArgs e)
         {
-            if (categoriaTB.Text != "" && comprobarCategoria(categoriaTB.Text) &&  nombreTB.Text != "" && apellidoTB.Text != "" && segundoApellidoTB.Text != "" && fechaNacTB.SelectedDate != null && direccionTB.Text != "" && correoTB.Text != "" && telefonoTB.Text != "")
+            if (categoriaTB.Text != "" && nombreTB.Text != "" && apellidoTB.Text != "" && segundoApellidoTB.Text != "" && fechaNacTB.SelectedDate != null && direccionTB.Text != "" && correoTB.Text != "" && telefonoTB.Text != "")
             {
                 try
                 {
-                    string categoria = categoriaTB.Text;
+                    string categoria = categoriaTB.Text.ToLower();
                     string nombre = nombreTB.Text;
                     string apellido = apellidoTB.Text;
                     string segundoApellido = segundoApellidoTB.Text;
@@ -156,23 +160,9 @@ namespace aeropuerto.Vista
             }
         }
 
-        private bool comprobarCategoria(string categoria)
-        {
-
-            // 'azafato','piloto','copiloto','ingeniero de vuelo'
-            if (categoria == "piloto" || categoria == "copiloto" || categoria == "ingeniero de vuelo" || categoria == "azafato")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
         private void limpiarCampos()
         {
-            categoriaTB.Text = "";
+            categoriaTB.SelectedItem = -1;
             nombreTB.Text = "";
             apellidoTB.Text = "";
             segundoApellidoTB.Text = "";
