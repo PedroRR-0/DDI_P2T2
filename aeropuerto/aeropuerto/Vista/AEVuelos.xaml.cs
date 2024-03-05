@@ -232,15 +232,13 @@ namespace aeropuerto.Vista
 
 
 
-        private List<int> ObtenerAvionesConEstado(int estado)
+        public List<int> ObtenerAvionesConEstado(int estado)
         {
             List<int> aviones = new List<int>();
 
             Modelo.Conexion conex = Modelo.Conexion.getInstance();
             MySqlConnection conexion = conex.obtenerConexion();
 
-            // Debes implementar la lógica para obtener aviones con el estado especificado desde tu base de datos
-            // Aquí un ejemplo de cómo podrías hacerlo (debes ajustarlo según tu conexión y esquema)
             using (var cmd = new MySqlCommand("SELECT idAvion FROM aviones WHERE estado = @estado", conexion))
             {
                 cmd.Parameters.AddWithValue("@estado", estado);
@@ -263,8 +261,6 @@ namespace aeropuerto.Vista
             List<int> trayectos = new List<int>();
             Modelo.Conexion conex = Modelo.Conexion.getInstance();
             MySqlConnection conexion = conex.obtenerConexion();
-            // Debes implementar la lógica para obtener todos los trayectos desde tu base de datos
-            // Aquí un ejemplo de cómo podrías hacerlo (debes ajustarlo según tu conexión y esquema)
             using (var cmd = new MySqlCommand("SELECT idTrayecto FROM trayectos", conexion))
             {
                 using (var reader = cmd.ExecuteReader())

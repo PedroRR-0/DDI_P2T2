@@ -35,6 +35,29 @@ namespace aeropuerto.Modelo
             return instancia;
         }
 
+        public List<int> ObtenerAvionesConEstado(int estado)
+        {
+            List<int> aviones = new List<int>();
+
+            Conexion conex = Conexion.getInstance();
+            MySqlConnection conexion = conex.obtenerConexion();
+
+            using (var cmd = new MySqlCommand("SELECT idAvion FROM aviones WHERE estado = @estado", conexion))
+            {
+                cmd.Parameters.AddWithValue("@estado", estado);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        aviones.Add(Convert.ToInt32(reader["idAvion"]));
+                    }
+                }
+            }
+            conex.cerrarConexion();
+            return aviones;
+        }
+
         /**
          * Ejemplo de conexion
          * 
